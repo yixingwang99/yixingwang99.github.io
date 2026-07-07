@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --fg: #111111;
+      --muted: #888888;
+      --accent: #2563EB;
+      --border: #e0e0e0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0d0d;
+        --fg: #e0e0e0;
+        --muted: #606060;
+        --accent: #60A5FA;
+        --border: #1e1e1e;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--fg);
+      font-size: 14px;
+      line-height: 1.85;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .header {
+      padding: 60px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .back {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 32px;
+    }
+
+    .back:hover { color: var(--fg); }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .post-list { list-style: none; }
+
+    .post-item {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .post-item:hover .post-title { color: var(--accent); }
+
+    .post-date {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      width: 80px;
+    }
+
+    .post-right { flex: 1; }
+
+    .post-title {
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .post-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    footer {
+      padding: 32px 0 48px;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="back">← your name</a>
+  <h1>blog</h1>
+  <p class="subtitle">notes on quant research, markets, and math</p>
+</header>
+
+<ul class="post-list">
+
+  <!-- 每篇文章复制一个 <li> 块，按时间倒序排列 -->
+
+  <li>
+    <a href="posts/2025-01-06-first-post.html" class="post-item">
+      <span class="post-date">2025-01-06</span>
+      <div class="post-right">
+        <div class="post-title">Your First Post Title Here</div>
+        <div class="post-desc">A one-line description of what this post is about.</div>
+      </div>
+    </a>
+  </li>
+
+</ul>
+
+<footer>© 2025 Your Name</footer>
+
+</body>
+</html>
